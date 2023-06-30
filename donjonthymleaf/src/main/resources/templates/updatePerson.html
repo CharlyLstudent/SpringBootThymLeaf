@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Person</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>NICOLAS LOOOOOL TRO DROL </h1>
+
+<form th:action="@{/updatePerson/{id}(id = ${person.id})}" th:object="${personForm}" th:method="put">
+    <input type="text" th:field="*{name}" placeholder="Enter new name"/>
+    <button type="submit" value = "update">Update</button>
+</form>
+
+</body>
+</html>
